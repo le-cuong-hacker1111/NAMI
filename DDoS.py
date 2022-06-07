@@ -215,7 +215,7 @@ class MainLoop():
     def setup(self):
         global Close, Request, Tot_req
         while True:        
-            url = input('> Nhập link website: ')
+            url = input('> Nhập link website đi thằng ngáo: ')
             url = self.check_url(url)
             try:
                 req = urllib.request.Request(url, None, {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36'})
@@ -225,14 +225,14 @@ class MainLoop():
                 print ('> Không thể mở link.')
         while True:            
             try:
-                l = str(input('> Nhập proxy = proxy.txt: '))
+                l = str(input('> Nhập proxy NHANH = proxy.txt: '))
                 in_file = open(l,"r")
                 lista = []
                 for i in in_file:
                     lista.append(i.split("/n")[0])
                 break
             except:
-                print ('Error to read file.')
+                print ('MÀY NHẬP SAI TÊN FILE THẰNG NGU.')
         while True:                
             try:
                 num_threads = int(input('> Nhập số lượng máy chủ atak [800]: '))
