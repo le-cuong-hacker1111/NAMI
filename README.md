@@ -1,13 +1,13 @@
 # NAMI-V2
 
-## Cách chạy và cài đặt và sứ dụng
+## Cách chạy và cài đặt và sử dụng
 
-*` git clone https://github.com/le-cuong-hacker1111/NAMI-V2.4 && cd NAMI-V2.4 && chmod +x DDoS.py`
+` git clone https://github.com/le-cuong-hacker1111/NAMI-V2.4 && cd NAMI-V2.4 && chmod +x DDoS.py`
 
-*` python3 DDoS.py`
+` python3 DDoS.py`
 
-*` Dòng 1 nhập link website muốn DDoS`
+` Dòng 1 nhập link website muốn DDoS`
 
-*` Dòng 2 nhập ' proxy.txt '`
+` Dòng 2 nhập ' proxy.txt '`
 
-*` Dòng 3 nhập thread = 800`
+` Dòng 3 nhập thread = 800`
